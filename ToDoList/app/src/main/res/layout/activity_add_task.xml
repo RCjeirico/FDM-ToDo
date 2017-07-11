@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="dev.edmt.todolist.AddTask"
+    android:background="@drawable/download">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_marginTop="36dp"
+        android:hint="Enter task name"
+        android:inputType="text"
+        android:background="@drawable/round"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/desc"
+        android:maxLength="20"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:layout_marginTop="20dp"
+        android:hint="Enter task description"
+        android:background="@drawable/round"
+        android:lines= "5"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add task"
+        android:id="@+id/add"
+        android:layout_marginBottom="36dp"
+        android:onClick="add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Add date"
+        android:id="@+id/showDate"
+        android:onClick="onClick"
+        android:textColor="#767676"
+        android:background="@drawable/round"
+        android:layout_below="@+id/desc"
+        android:layout_alignStart="@+id/desc"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
